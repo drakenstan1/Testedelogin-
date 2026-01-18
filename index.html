@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Área Restrita</title>
+
+<style>
+body {
+  background: black;
+  color: #00ff00;
+  font-family: monospace;
+  text-align: center;
+  padding-top: 100px;
+}
+input, button {
+  background: black;
+  color: #00ff00;
+  border: 1px solid #00ff00;
+  padding: 10px;
+  margin-top: 10px;
+}
+#secreto {
+  display: none;
+  margin-top: 40px;
+  font-size: 20px;
+}
+</style>
+
+</head>
+<body>
+
+<h1>ACESSO RESTRITO</h1>
+<p>Digite o código secreto:</p>
+
+<input type="password" id="senha">
+<br>
+<button onclick="login()">ENTRAR</button>
+
+<div id="secreto">
+  <h2>✅ ACESSO LIBERADO</h2>
+  <p>Finalmente eu consegui fazer isso presta kakakakakkak</p>
+</div>
+
+<script>
+function login() {
+  const senha = document.getElementById("senha").value;
+
+  if (senha === "8264") {
+    document.getElementById("secreto").style.display = "block";
+    alert("ACESSO CONCEDIDO 😈");
+  } else {
+    alert("ACESSO NEGADO ❌");
+  }
+}
+</script>
+
+</body>
+</html>
